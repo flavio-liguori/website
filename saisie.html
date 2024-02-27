@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+lt<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,13 +90,11 @@
         annyang.setLanguage('fr-FR');
         if (annyang) {
           // Add our commands to annyang
-          annyang.addCallback('result', function(phrases) {
-              
-          });
-          annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
+          annyang.addCallback('result', function(phrase) {
               input = document.getElementById("name");
-              input.value = userSaid;
+              input.value = phrase;
           });
+          
 
           
         
