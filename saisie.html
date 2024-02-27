@@ -90,10 +90,16 @@ lt<!DOCTYPE html>
         annyang.setLanguage('fr-FR');
         if (annyang) {
           // Add our commands to annyang
-          annyang.addCallback('result', function(phrase) {
-              input = document.getElementById("name");
-              input.value = phrase;
-          });
+          var commands = {
+      // La commande 'anything' est un mot-clé spécial qui correspond à n'importe quelle parole
+          '*anything': function(text) {
+        // Mettez le texte reconnu dans le champ de texte
+                document.getElementById('inputVoice').value = text;
+            }
+           };
+
+    // Ajoutez nos commandes à Annyang
+           annyang.addCommands(commands);
           
 
           
