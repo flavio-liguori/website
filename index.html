@@ -88,24 +88,27 @@
     <script>
         if (annyang) {
           // Add our commands to annyang
+        
+          annyang.setLangue('fr-FR');
           annyang.addCommands({
-            'hello': function() { alert('Hello world!'); }
+            'Salut': function() { alert('Hello world!'); }
           });
           annyang.addCommands({
-            'push': function() { alert('Push !'); }
+            'Alert': function() { alert('Alert !'); }
           });
           annyang.addCommands({
             'orange': function() { document.getElementById("orange").style.background = "orange";}
           }); 
           annyang.addCommands({
-            'push orange': function() {alert('Push ORANGE !'); ;}
+            'Alert Orange': function() {alert('Alert ORANGE !'); ;}
           }); 
           annyang.addCommands({
-            'blue': function() { document.getElementById("orange").style.background = "blue";}
+            'bleu': function() { document.getElementById("orange").style.background = "blue";}
           }); 
           annyang.addCommands({
-            'I want push blue and orange': function() { alert('Push BLUE AND ORANGE !');}
+            'Je veux alert bleu et orange': function() { alert('Alert bleu et orange!');}
           }); 
+          
         
           
         
