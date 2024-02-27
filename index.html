@@ -89,6 +89,7 @@
     <script>
         annyang.setLanguage('fr-FR');  
         if (annyang) {
+          annyang.addCommands({       
           // Add our commands to annyang
             'Salut': function() { alert('Hello world!'); }
           });
