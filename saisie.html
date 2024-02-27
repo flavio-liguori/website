@@ -90,9 +90,12 @@
         annyang.setLanguage('fr-FR');
         if (annyang) {
           // Add our commands to annyang
+          annyang.addCallback('result', function(phrases) {
+              input = document.getElementById("name");
+              input.value = phrases;
+          }
 
-          input = document.getElementById("name");
-          input.value = annyang.result();
+          
         
           
           
