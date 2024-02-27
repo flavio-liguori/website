@@ -87,10 +87,14 @@
     </div>
 
     <script>
+        annyang.setLangue('fr-FR');
         if (annyang) {
           // Add our commands to annyang
+
+          input = document.getElementById("name");
+          input.value = annyang.result();
         
-          annyang.setLangue('fr-FR');
+          
           
         
           
