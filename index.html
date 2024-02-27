@@ -79,7 +79,7 @@
     </style>
 </head>
 <body>
-    <div class="question-container">
+    <div class="question-container" id="orange">
 
        <big></big> Basic vocal comprehension</big>
         
@@ -93,6 +93,9 @@
           });
           annyang.addCommands({
             'push': function() { alert('Push !'); }
+          });
+          annyang.addCommands({
+            'orange': function() { document.getElementById("orange").style.background = "orange";}
           });  
           
         
